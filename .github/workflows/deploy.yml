@@ -30,7 +30,7 @@ jobs:
       - name: Deploy to Cloud Run
         run: |
           gcloud run deploy financial-summary-api \
-            --image gcr.io/karim-dev404/financial-summary-api \
+            --image asia-southeast2-docker.pkg.dev/karim-dev404/financial-summary-api/financial-summary-api \
             --platform managed \
             --region asia-southeast2 \
             --allow-unauthenticated
