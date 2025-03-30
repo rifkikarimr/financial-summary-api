@@ -46,4 +46,15 @@ app.post('/process', async (req, res) => {
   }
 });
 
-app.listen(3000, () => console.log('API running on port 3000'));
+const PORT = process.env.PORT || 8080; // ✅ Ensure you use the Cloud Run assigned port
+
+
+// app.listen(3000, () => console.log('API running on port 3000'));'
+
+app.get('/', (req, res) => {
+  res.send('Hello from Cloud Run!');
+});
+
+app.listen(PORT, () => {
+  console.log(`Server is running on port ${PORT}`);
+});
