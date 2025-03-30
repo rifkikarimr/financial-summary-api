@@ -26,6 +26,6 @@ jobs:
           gcloud run deploy financial-summary-api \
             --image gcr.io/karim-dev404/financial-summary-api \
             --platform managed \
-            --region us-central1 \
+            --region asia-southeast2 \
             --allow-unauthenticated
 
