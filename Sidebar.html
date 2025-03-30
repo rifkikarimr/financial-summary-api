@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <base target="_top">
+    <style>
+      body { font-family: Arial, sans-serif; padding: 10px; }
+      button { background-color: #4285F4; color: white; border: none; padding: 10px 15px; cursor: pointer; }
+      button:hover { background-color: #357AE8; }
+    </style>
+    <script>
+      function insertSummary() {
+        google.script.run.insertSummary();
+        alert("Summary inserted!");
+      }
+    </script>
+  </head>
+  <body>
+    <h3>Financial Report Summarizer</h3>
+    <button onclick="insertSummary()">Generate Summary</button>
+  </body>
+</html>
