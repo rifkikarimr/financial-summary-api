@@ -22,12 +22,12 @@ function getSelectedData() {
   return values;
 }
 
-var CLOUD_RUN_API_URL = 'https://financial-summary-api-49165137536.asia-southeast2.run.app';
-
 // Sends data to the backend API for categorization.
 function processFinancialData() {
   var data = getSelectedData();
-  var response = UrlFetchApp.fetch(CLOUD_RUN_API_URL + '/process', {
+  var scriptProperties = PropertiesService.getScriptProperties();
+  var backendUrl = scriptProperties.getProperty('BACKEND_URL');
+  var response = UrlFetchApp.fetch(backendUrl + '/process', {
     method: 'post',
     contentType: 'application/json',
     payload: JSON.stringify({ transactions: data })
