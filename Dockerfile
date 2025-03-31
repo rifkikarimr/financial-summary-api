@@ -7,6 +7,7 @@ WORKDIR /app
 # Copy package.json and install dependencies
 COPY package.json package-lock.json ./
 RUN npm install
+RUN npm install pg@latest
 
 # Copy the rest of the code
 COPY . .
